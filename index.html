@@ -43,14 +43,18 @@
         randomOption1 = getRandomElement(myArray);
         randomOption2 = getRandomElement(myArray);
         randomOption3 = getRandomElement(myArray);        
+        var opt1 = randomOption1.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ").replace(/_/g, " ").slice(0, -4);
+        var opt2 = randomOption2.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ").replace(/_/g, " ").slice(0, -4);
+        var opt3 = randomOption3.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ").replace(/_/g, " ").slice(0, -4);
+        var opt4 = randomElement.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ").replace(/_/g, " ").slice(0, -4);
         var option1 = document.getElementById("option1");
         var option2 = document.getElementById("option2");
         var option3 = document.getElementById("option3");
         var option4 = document.getElementById("option4");        
-        option1.innerHTML = '<label><input type="radio" name="answer" value="A">' + randomOption1.replace(/_/g, " ").slice(0, -4) + '</label><br>';
-        option2.innerHTML = '<label><input type="radio" name="answer" value="B">' + randomOption2.replace(/_/g, " ").slice(0, -4) + '</label><br>';
-        option3.innerHTML = '<label><input type="radio" name="answer" value="C">' + randomOption3.replace(/_/g, " ").slice(0, -4) + '</label><br>';
-        option4.innerHTML = '<label><input type="radio" name="answer" value="D">' + randomElement.replace(/_/g, " ").slice(0, -4) + '</label><br>';
+        option1.innerHTML = '<label><input type="radio" name="answer" value="A">' + opt1 + '</label><br>';
+        option2.innerHTML = '<label><input type="radio" name="answer" value="B">' + opt2 + '</label><br>';
+        option3.innerHTML = '<label><input type="radio" name="answer" value="C">' + opt3 + '</label><br>';
+        option4.innerHTML = '<label><input type="radio" name="answer" value="D">' + opt4 + '</label><br>';
       }        
 
       function generateRandom() {
