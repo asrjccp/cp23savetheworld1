@@ -1,3 +1,5 @@
+/* Default styles */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #eee;
@@ -74,4 +76,30 @@ form input[type="submit"]:hover {
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+  
+  button {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  form {
+    max-width: 90%;
+  }
+  
+  form input[type="submit"] {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
 }
