@@ -44,7 +44,8 @@
 
       function generateRandomOptions() {
         randomOption1 = getRandomElement(myArray);
-        randomOption2 = getRandomElement(myArray);      
+        randomOption2 = getRandomElement(myArray);   
+        randomOption3 = getRandomElement(myArray);      
         var opt1 = randomOption1.split("_").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ").replace(/_/g, " ").slice(0, -4);
         var opt2 = randomOption2.split("_").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ").replace(/_/g, " ").slice(0, -4);
         var opt3 = randomOption3.split("_").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ").replace(/_/g, " ").slice(0, -4);
