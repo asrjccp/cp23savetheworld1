@@ -53,13 +53,12 @@
         if(chosen == 0){
             opt1 = randomElement.split("_").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ").replace(/_/g, " ").slice(0, -4);
         }
-        if(chosen == 1){
+        if else(chosen == 1){
             opt2 = randomElement.split("_").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ").replace(/_/g, " ").slice(0, -4);
         }
-        if(chosen == 2){
+        else{
             opt3 = randomElement.split("_").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ").replace(/_/g, " ").slice(0, -4);
         }
-        randomElement.split("_").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ").replace(/_/g, " ").slice(0, -4);
         var option1 = document.getElementById("option1");
         var option2 = document.getElementById("option2");
         var option3 = document.getElementById("option3");        
