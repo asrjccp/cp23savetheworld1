@@ -17,6 +17,7 @@
       <input type="submit" value="Submit">
     </form>
     <p id="message"></p>
+    <img src="abdus_sayem_sarwer.png" alt="world saviour" />
     <button onclick="reset()">Play Again</button>
     <script>
       // Define an array of elements
@@ -32,7 +33,7 @@
       function generateRandomElement() {
         var randomElement = getRandomElement(myArray);
         var resultElement = document.getElementById("result");
-        resultElement.innerHTML = "<img src='" + randomElement + "' alt='world saviour' />;
+        resultElement.innerHTML = "<img src='" + randomElement + "' alt='world saviour'" />;
       }   
       
       function checkAnswer() {
