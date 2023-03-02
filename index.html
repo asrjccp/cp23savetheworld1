@@ -4,14 +4,12 @@
     <title>Know your world saviours</title>
   </head>
   <body>
-    
+    <h1>Know your world saviours</h1>    
     <p id="result"></p>
-    <button onclick="generateRandomElement()">Generate Random Element</button>  
+    <button onclick="generateRandomElement()">Generate Random Student</button>  
     
-    <h1>Know your world saviours</h1>
-    <img src="https://example.com/photo.jpg" alt="photo">
     <form onsubmit="return checkAnswer()">
-      <p>Who is in the photo?</p>
+      <p>Who?</p>
       <label><input type="radio" name="answer" value="A">Option A</label><br>
       <label><input type="radio" name="answer" value="B">Option B</label><br>
       <label><input type="radio" name="answer" value="C">Option C</label><br>
@@ -34,7 +32,7 @@
       function generateRandomElement() {
         var randomElement = getRandomElement(myArray);
         var resultElement = document.getElementById("result");
-        resultElement.innerHTML = "Random Element: " + randomElement;
+        resultElement.innerHTML = "<img src='" + randomElement + "' alt='world saviour' />;
       }   
       
       function checkAnswer() {
