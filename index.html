@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guess the Name Game</title>
+  </head>
+  <body>
+    <h1>Guess the Name Game</h1>
+    <img src="https://example.com/photo.jpg" alt="photo">
+    <form onsubmit="return checkAnswer()">
+      <p>Who is in the photo?</p>
+      <label><input type="radio" name="answer" value="A">Option A</label><br>
+      <label><input type="radio" name="answer" value="B">Option B</label><br>
+      <label><input type="radio" name="answer" value="C">Option C</label><br>
+      <label><input type="radio" name="answer" value="D">Option D</label><br>
+      <input type="submit" value="Submit">
+    </form>
+    <p id="message"></p>
+    <button onclick="reset()">Play Again</button>
+    <script>
+      function checkAnswer() {
+        var selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
+        var correctAnswer = "A"; // Change this to the correct answer
+        var message = document.getElementById("message");
+        if (selectedAnswer === correctAnswer) {
+          message.innerHTML = "You got it right!";
+        } else {
+          message.innerHTML = "Sorry, that's not the right answer. Try again!";
+        }
+        return false;
+      }
+      function reset() {
+        document.querySelector('input[name="answer"]:checked').checked = false;
+        document.getElementById("message").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>
